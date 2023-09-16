@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A pagina inicial de um wepApp de delivery de uma hamburgueria fictícia." />
+  <meta name="keywords" content="rei do Burguer, aplicativo rei do burguer, hamburgueria fictícia , hamburgueria fictícia" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="URL canônica da página" />
+  <meta name="author" content="Dinho silwa" />
+  <meta property="og:title" content="Rei do Burguer" />
+  <link rel="icon" href="assets/burgues/favicon-32x32.png" type="image/x-icon">
+
+  <title>Rei do Burguer</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/estilo.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <nav class="menuPrincipal">
+    <span class="notification">
+      <p class="contadordepedidos">0</p>
+    </span>
+    <ul>
+      <li class="opcaoMenuPrincipal pedidos" data-action="mostrarPedidos">
+        <i class="fas fa-clipboard-list contadordepedidos"></i> Meus Pedidos
+      </li>
+      <li class="opcaoMenuPrincipal hamburgueres liSelecionado" data-action="mostrarHamburgueres">
+        <i class="fas fa-hamburger"></i> Hambúrgueres
+      </li>
+      <li class="opcaoMenuPrincipal bebidas" data-action="mostrarBebidas">
+        <i class="fa-solid fa-beer-mug-empty"></i> Bebidas
+      </li>
+    </ul>
+  </nav>
+
+  <div class="avisodePedidovazio">
+    <p><i class="fas fa-clipboard-list contadordepedidos"></i> Ops! Nada aqui,  Adicione o seu Primeiro Pedido :)</p>
+  </div>
+  <ul id="listaDeProdutos" class="ulNavegacao ">
+    <!-- ITEM DA LISTA -->
+    <li class="hamburguerli">
+      <div>
+        <figure>
+        <img class="imgPedidos" src="assets/burgues/brg1.png" alt="imagem01 hambúrguer">
+       
+      </figure>
+      </div>
+      <div>
+        <p data-pedido="Hambúrguer Platina">
+          Hambúrguer Platina</p>
+        <p>Saboroso hambúrguer de carne e queijo</p>
+        <p class="preco">R$ 59,99</p>
+        <button class="btnAdicionar btn-hab" data-pedido="Hambúrguer Platina">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="hamburguerli">
+      <div>
+        <img class="imgPedidos" src="assets/burgues/brg5.png" alt="imagem01 hambúrguer">
+      </div>
+      <div>
+        <p>Hambúrguer Majestoso</p>
+        <p>Um banquete real em forma de hambúrguer, com carne nobre, queijo brie e cebolas caramelizadas.</p>
+        <p>R$ 59,99</p>
+        <button class="btnAdicionar btn-hab" data-pedido="Hambúrguer Majestoso">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="hamburguerli">
+      <div>
+        <img class="imgPedidos" src="assets/burgues/brg2.png" alt="imagem01 hambúrguer">
+      </div>
+      <div>
+        <p>Hambúrguer da Rainha</p>
+        <p>Um hambúrguer digno de realeza, com frango grelhado, rúcula e molho de mostarda dijon.</p>
+        <p>R$ 59,99</p>
+        <button class="btnAdicionar btn-hab" data-pedido="Hambúrguer da Rainha">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="hamburguerli">
+      <div>
+        <img class="imgPedidos" src="assets/burgues/brg3.png" alt="imagem01 hambúrguer">
+      </div>
+      <div>
+        <p>Hambúrguer Príncipe do Bacon</p>
+        <p>O príncipe dos hambúrgueres com carne suculenta, queijo cheddar e tiras de bacon.</p>
+        <p>R$ 59,99</p>
+        <button class="btnAdicionar btn-hab" data-pedido="Hambúrguer Príncipe do Bacon">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="hamburguerli">
+      <div>
+        <img class="imgPedidos" src="assets/burgues/brg4.png" alt="imagem01 hambúrguer">
+      </div>
+      <div>
+        <p>Hambúrguer Monarca Mexicano</p>
+        <p>Uma fusão real de sabores mexicanos com pimentões jalapeños, guacamole e queijo picante.</p>
+        <p>R$ 59,99</p>
+        <button class="btnAdicionar btn-hab" data-pedido="Hambúrguer Monarca Mexicano">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="hamburguerli">
+      <div>
+        <img class="imgPedidos" src="assets/burgues/brg1.png" alt="imagem01 hambúrguer">
+      </div>
+      <div>
+        <p>Hambúrguer Rei do Mar</p>
+        <p>Uma deliciosa mistura de frutos do mar com camarões grelhados, alface e maionese de limão</p>
+        <p>R$ 59,99</p>
+        <button class="btnAdicionar btn-hab" data-pedido="Hambúrguer Rei do Mar">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="hamburguerli">
+      <div>
+        <img class="imgPedidos" src="assets/burgues/brg4.png" alt="imagem01 hambúrguer">
+      </div>
+      <div>
+        <p>Hambúrguer Tudor</p>
+        <p>Uma viagem à Inglaterra com salsichão, ovo frito e molho de mostarda.</p>
+        <p>R$ 59,99</p>
+        <button class="btnAdicionar btn-hab" data-pedido="Hambúrguer Tudor">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="bebidasli">
+      <div>
+        <img class="imgPedidos" src="assets/refri/r2.png" alt="imagem01 bebida">
+      </div>
+      <div>
+        <p>Guaraná Antarctica</p>
+        <p>É do Brasil</p>
+        <p>R$ 5,99</p>
+        <button class="btnAdicionar" data-pedido="Guaraná Antarctica">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="bebidasli">
+      <div>
+        <img class="imgPedidos" src="assets/refri/r3.png" alt="imagem01 bebida">
+      </div>
+      <div>
+        <p>Fanta Laranja</p>
+        <p>O verdadeiro sabor da fruta</p>
+        <p>R$ 5,99</p>
+        <button class="btnAdicionar" data-pedido="Fanta Laranja">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="bebidasli">
+      <div>
+        <img class="imgPedidos" src="assets/refri/r4.png" alt="imagem01 bebida">
+      </div>
+      <div>
+        <p>Pepsi-Cola</p>
+        <p>Explosão de sabores</p>
+        <p>R$ 8,99</p>
+        <button class="btnAdicionar" data-pedido="Pepsi-Cola">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="bebidasli">
+      <div>
+        <img class="imgPedidos" src="assets/refri/r5.png" alt="imagem01 bebida">
+      </div>
+      <div>
+        <p>Sprite Clássica</p>
+        <p>Sabor Inconfundível</p>
+        <p>R$ 4,99</p>
+        <button class="btnAdicionar" data-pedido="Sprite Clássica">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="bebidasli">
+      <div>
+        <img class="imgPedidos" src="assets/refri/r6.png" alt="imagem01 bebida">
+      </div>
+      <div>
+        <p>Coca-Cola Clássica</p>
+        <p>Sabor Original</p>
+        <p>R$ 5,99</p>
+        <button class="btnAdicionar" data-pedido="Coca-Cola Clássica">Adicionar</button>
+      </div>
+    </li>
+    <!-- ITEM DA LISTA -->
+    <li class="bebidasli">
+      <div>
+        <img class="imgPedidos" src="assets/refri/r1.png" alt="imagem01 bebida">
+      </div>
+      <div>
+        <p>Coca Zero</p>
+        <p>Zero calorias, zero açúcar</p>
+        <p>R$ 7,99</p>
+        <button class="btnAdicionar" data-pedido="Coca Zero">Adicionar</button>
+      </div>
+    </li>
+  </ul>
+  <section id="backgroundMeusPedidos" class="ocultar">
+    <section class="meusPedidos">
+      <span class="fecharPedidos" onclick="fecharMeusPedidos()"><i class="fa-regular fa-circle-xmark"></i></span>
+      <div class="adcionarUls">
+        <ul class="uLmostrarPedidos">
+          <h4>Meus Pedidos</h4>
+        </ul>
+      </div>
+      <div class="textoparalink">
+        <textarea class="comentario" name="comentario" rows="2" cols="20" placeholder="Adicione uma observação, Ex.: Tirar Alface"></textarea>
+      </div>
+
+      <div>Total:66,99</div>
+      <div>
+        <button class="btnFinalizarPedido">
+          <i class="fa-solid fa-burger"></i> Finalizar pedido no WhatsApp
+        </button>
+        <button class="btnApagarPedidos">
+          <i class="fa-solid fa-trash"></i> Excluir Item
+        </button>
+      </div>
+    </section>
+  </section>
+  <footer class="rodapePedidos">
+    <ul class="menuDeIcones">
+      <li class="contadorRodape">0</li>
+      <li><i class="fa fa-shopping-basket pedidosRodape" aria-hidden="true"></i></li>
+      <li><i class="fa fa-ticket" aria-hidden="true"></i></li>
+      <li><i class="fa fa-credit-card-alt" aria-hidden="true"></i></li>
+      <li><i class="fa fa-comments" aria-hidden="true"></i></li>
+    </ul>
+  </footer>
+  <script src="javascript/app.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'lato', sans-serif;
+    user-select: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+    background: linear-gradient(to right, #400000, #400a00);
+}
+
+.menuPrincipal {
+    width: 100vw;
+    height: 60px;
+    background: linear-gradient(to bottom, #FFA500, #fba403);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    box-shadow: 2px 2px 5px #280303c4;
+    z-index: 999;
+}
+
+.menuPrincipal ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.menuPrincipal ul li {
+    width: 30%;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.menuPrincipal ul li i {
+    margin: 8px;
+}
+
+.selecionadoLi {
+    border-bottom: 2px solid red;
+}
+
+h3 {
+    color: transparent;
+    background-image: linear-gradient(to bottom, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#backgroundMeusPedidos {
+    background-color: #000000b8;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+}
+
+.meusPedidos {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    width: 90vw;
+    height: 400px;
+    margin: auto;
+    background-color: #e6e5e5;
+    border-radius: 1.2rem;
+    box-sizing: border-box;
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.meusPedidos h4 {
+    color: #280303;
+    width: 35%;
+    padding: 0px 10px;
+}
+
+.meusPedidos li {
+    font-size: 1rem;
+    color: #400000;
+}
+
+.meusPedidos div {
+    margin: 10px;
+}
+
+.meusPedidos div:first-child {
+    width: 40%;
+}
+
+.meusPedidos div:last-child {
+    width: 70%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.meusPedidos div:last-child button {
+    width: 70%;
+    height: 50px;
+    background-color: #FFA500;
+    color: #400000;
+    margin: 2px;
+    font-size: 0.7rem;
+    border-radius: 20px;
+}
+
+.fecharPedidos {
+    position: relative;
+    display: none;
+    left: 340px;
+    top: -10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #e6e5e5;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fecharPedidos i {
+    text-align: center;
+    font-size: 1.7rem;
+    color: red;
+}
+
+.imgPedidos {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 3px solid #FFA500;
+}
+
+.imgPedidos:hover .caption {
+    background-color: red;
+}
+
+.notification {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+    border: 3px solid #FFA500;
+}
+
+.notification p {
+    text-align: center;
+    color: #fff;
+}
+
+#listaDeProdutos {
+    margin-top: 100px;
+}
+
+.hamburguerli {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+.hamburguerli:focus {
+    outline: none;
+}
+
+.hamburguerli:active {
+    background-color: #280303;
+}
+
+.babidasli:active {
+    background-color: #280303;
+}
+
+.bebidasli {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+#listaDeProdutos li div {
+    margin: 10px;
+}
+
+#listaDeProdutos li div:last-child {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#listaDeProdutos li div:last-child p:nth-child(2) {
+    color: #fff;
+    font-style: italic;
+    font-size: 0.9rem;
+    width: 90%;
+}
+
+#listaDeProdutos li div:last-child p:first-child {
+    color: transparent;
+    background-image: linear-gradient(to bottom, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: bold;
+}
+
+#listaDeProdutos li div:last-child p:nth-child(3) {
+    width: 40%;
+    color: #FFA500;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+button {
+    width: 70%;
+    padding: 5px;
+    height: 40px;
+    text-decoration: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #FFA500;
+    color: #400000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+
+.buttonClicado {
+    color: #FFA500;
+    background-color: #400000;
+    border: 2px solid #FFA500;
+}
+
+button:active {
+    background-color: #400000;
+    color: #f8f7f7;
+    transition: all 1s ease;
+}
+
+.ocultar {
+    border: 2px solid red;
+    display: none;
+}
+
+.liSelecionado {
+    background: linear-gradient(to right, #400000, #400a00);
+    color: #FFA500;
+}
+
+.rodapePedidos {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f7f7;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.menuDeIcones {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menuDeIcones li i, .fa-comments {
+    color: #280303;
+    padding: 10px;
+    background-color: #e3e1e1;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.contadorRodape {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    color: #fff;
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    left: 18%;
+    top: 20px;
+    border: 2px solid #ffffff;
+}
+
+.comentario {
+    padding: 20px;
+}
+
+.menuDeIcones li i:active {
+    background-color: #400000;
+    color: #e3e1e1;
+}
+
+.btnApagarPedidos:active {
+    background-color: #400000;
+}
+
+.btnFinalizarPedido:active {
+    background-color: #400000;
+}
+
+.avisodePedidovazio {
+
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e6e5e5ec;
+    align-items: center;
+    transition: all 2s ease;
+
+}
+
+.avisodePedidovazio p {
+    margin: auto;
+    left: 30%;
+    background-color: #fba403;
+    color: #400000;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    height: 60px;
+    font-weight: bold;
+    transition: all 2s ease;
+    border-radius: 10px;
+    transform: translateY(0); /* Começa fora da tela */
+    transition: transform 2s ease;
+
+}
